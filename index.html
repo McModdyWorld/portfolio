@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's Portfolio</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1e1e2f;
+            color: #ffffff;
+        }
+        header {
+            text-align: center;
+            padding: 2rem;
+            background-color: #282a36;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+        }
+        main {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 2rem;
+        }
+        h2 {
+            font-size: 1.8rem;
+            border-bottom: 2px solid #6272a4;
+            padding-bottom: 0.5rem;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.7rem 1.5rem;
+            background-color: #50fa7b;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #3bce63;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #282a36;
+            color: #ffffff;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hi, I'm Alex!</h1>
+        <p>A hobby coder and creator of the Tronkey CLI package manager</p>
+    </header>
+    <main>
+        <section>
+            <h2>About Me</h2>
+            <p>
+                I'm a passionate hobby coder who loves building tools and applications that make life easier.
+                My latest project, <strong>Tronkey</strong>, is a CLI-based package manager designed to simplify package management.
+            </p>
+        </section>
+        <section>
+            <h2>Tronkey CLI</h2>
+            <p>
+                Tronkey is a lightweight, fast, and reliable package manager built for developers who love efficiency.
+                It streamlines the process of installing packages directly from the command line.
+            </p>
+            <a class="button" href="https://github.com/McModdyWorld/tronkey" target="_blank">View on GitHub</a>
+        </section>
+        <section>
+            <h2>Contact Me</h2>
+            <p>
+                Have a project in mind or just want to say hi? You can reach me via email at <strong>info@koralnet.net</strong>.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Alex. All rights reserved.</p>
+    </footer>
+    <script>
+        // Example JavaScript for interactivity
+        document.querySelectorAll('.button').forEach(button => {
+            button.addEventListener('mouseover', () => {
+                button.style.backgroundColor = '#2de061';
+            });
+            button.addEventListener('mouseout', () => {
+                button.style.backgroundColor = '#50fa7b';
+            });
+        });
+    </script>
+</body>
+</html>
 
