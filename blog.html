@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex's Blog</title>
+    <style>
+        :root, ::backdrop {
+            --m3-scheme-primary: 101 85 143;
+            --m3-scheme-on-primary: 255 255 255;
+            --m3-scheme-primary-container: 233 221 255;
+            --m3-scheme-on-primary-container: 32 16 71;
+            --m3-scheme-inverse-primary: 207 189 254;
+            --m3-scheme-secondary: 98 91 113;
+            --m3-scheme-on-secondary: 255 255 255;
+            --m3-scheme-secondary-container: 232 222 248;
+            --m3-scheme-on-secondary-container: 30 25 43;
+            --m3-scheme-background: 253 247 255;
+            --m3-scheme-on-background: 29 27 32;
+            --m3-scheme-surface: 253 247 255;
+            --m3-scheme-on-surface: 29 27 32;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root, ::backdrop {
+                color-scheme: dark;
+                --m3-scheme-primary: 207 189 254;
+                --m3-scheme-on-primary: 54 39 93;
+                --m3-scheme-primary-container: 77 61 117;
+                --m3-scheme-on-primary-container: 233 221 255;
+                --m3-scheme-secondary: 203 194 219;
+                --m3-scheme-on-secondary: 51 45 65;
+                --m3-scheme-secondary-container: 74 68 88;
+                --m3-scheme-on-secondary-container: 232 222 248;
+                --m3-scheme-background: 20 18 24;
+                --m3-scheme-on-background: 230 224 233;
+                --m3-scheme-surface: 20 18 24;
+                --m3-scheme-on-surface: 230 224 233;
+            }
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            background-color: rgb(var(--m3-scheme-background));
+            color: rgb(var(--m3-scheme-on-background));
+            line-height: 1.6;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .header {
+            background-color: rgb(var(--m3-scheme-surface));
+            color: rgb(var(--m3-scheme-on-surface));
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: rgb(var(--m3-scheme-primary));
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1rem;
+            background-color: rgb(var(--m3-scheme-surface-container-low, 248 242 250));
+            padding: 0.5rem;
+            border-radius: 20px;
+        }
+
+        .tab {
+            padding: 10px 16px;
+            margin: 0 10px;
+            text-decoration: none;
+            color: rgb(var(--m3-scheme-secondary));
+            font-weight: 500;
+            border-radius: 20px;
+            transition: all 0.3s;
+        }
+
+        .tab:hover {
+            background-color: rgb(var(--m3-scheme-secondary-container));
+            color: rgb(var(--m3-scheme-on-secondary-container));
+        }
+
+        .tab.active {
+            background-color: rgb(var(--m3-scheme-secondary-container));
+            color: rgb(var(--m3-scheme-on-secondary-container));
+        }
+
+        .blog-post {
+            margin-bottom: 2rem;
+            background-color: rgb(var(--m3-scheme-surface-container, 242 236 244));
+            padding: 1.5rem;
+            border-radius: 16px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .blog-post h2 {
+            color: rgb(var(--m3-scheme-primary));
+            border-bottom: 2px solid rgb(var(--m3-scheme-secondary));
+            padding-bottom: 0.5rem;
+        }
+
+        .blog-post-meta {
+            font-size: 0.9rem;
+            color: rgb(var(--m3-scheme-secondary));
+            margin-bottom: 1rem;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: rgb(var(--m3-scheme-surface-container-low, 248 242 250));
+            color: rgb(var(--m3-scheme-on-surface-variant));
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle Theme">
+                🌓
+            </button>
+            <h1>Alex's Blog</h1>
+            <p>Thoughts, tutorials, and tech insights</p>
+        </header>
+
+        <nav class="tabs">
+            <a href="index.html" class="tab">About Me</a>
+            <a href="#" class="tab active">Blog</a>
+        </nav>
+
+        <main>
+            <article class="blog-post">
+                <h2>Building Tronkey: My Journey into CLI Package Management</h2>
+                <div class="blog-post-meta">Published on December 7, 2024</div>
+                <p>
+                    As a hobby coder, I've always been fascinated by tools that can simplify developers' workflows. In this post, I'll dive into the motivation behind creating Tronkey, the CLI package manager that aims to make package installation a breeze.
+                </p>
+                <p>
+                    The journey began when I realized how complex package management can be for new developers. Why should installing a package feel like solving a puzzle? Tronkey was born from this simple question.
+                </p>
+            </article>
+
+            <article class="blog-post">
+                <h2>The Art of Efficient Coding: My Top 5 Productivity Hacks</h2>
+                <div class="blog-post-meta">Published on November 15, 2024</div>
+                <p>
+                    Over the years, I've developed a set of strategies that have dramatically improved my coding efficiency. In this blog post, I'll share five productivity hacks that have transformed the way I approach programming projects.
+                </p>
+                <p>
+                    From leveraging keyboard shortcuts to mastering version control, these tips have been game-changers in my coding journey.
+                </p>
+            </article>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2024 Alex. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const htmlElement = document.documentElement;
+
+        themeToggle.addEventListener('click', () => {
+            const isDark = htmlElement.getAttribute('data-theme') === 'dark';
+            htmlElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        });
+
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+        if (savedTheme) {
+            htmlElement.setAttribute('data-theme', savedTheme);
+        } else if (systemPrefersDark) {
+            htmlElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+</body>
+</html>
